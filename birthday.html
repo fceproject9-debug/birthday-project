@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Maya 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#050014,#12002a,#1a0033);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* Stars */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("https://i.imgur.com/7b1Kp9y.png");
+  opacity:0.25;
+  z-index:-1;
+}
+
+/* Moon */
+.moon{
+  position:fixed;
+  top:50px;
+  right:40px;
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:radial-gradient(circle,#fff,#ddd,#aaa);
+  box-shadow:0 0 50px rgba(255,255,255,.9);
+  animation:glow 4s infinite alternate;
+}
+@keyframes glow{
+  from{box-shadow:0 0 30px rgba(255,255,255,.6)}
+  to{box-shadow:0 0 70px rgba(255,255,255,1)}
+}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+.hero h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3.5rem;
+  color:#ffd6f6;
+  text-shadow:0 0 20px #ff7bd5;
+}
+.hero p{
+  margin-top:15px;
+  font-size:1.2rem;
+  opacity:.9;
+}
+
+/* Glass Card */
+.card{
+  max-width:900px;
+  margin:60px auto;
+  padding:35px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(14px);
+  border-radius:25px;
+  box-shadow:0 0 50px rgba(255,182,193,0.25);
+  animation:fadeUp 2s ease;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Shayari */
+.shayari{
+  font-family:'Great Vibes',cursive;
+  font-size:1.9rem;
+  line-height:1.9;
+  text-align:center;
+}
+.shayari span{
+  display:block;
+  opacity:0;
+  animation:show 1.6s forwards;
+}
+.shayari span:nth-child(n){
+  animation-delay:calc(var(--i) * 1s);
+}
+@keyframes show{to{opacity:1}}
+
+/* Long Wishes */
+.wishes{
+  margin-top:30px;
+  text-align:center;
+  font-size:1.05rem;
+  line-height:1.9;
+  opacity:.95;
+}
+
+/* Ending */
+.end{
+  margin:90px 20px;
+  text-align:center;
+}
+.end p{
+  font-size:1.25rem;
+}
+.end h3{
+  margin-top:25px;
+  font-family:'Great Vibes',cursive;
+  font-size:2.2rem;
+  color:#ffb6e9;
+}
+
+/* Hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:22px;
+  animation:float 8s linear infinite;
+}
+@keyframes float{
+  from{transform:translateY(0);opacity:1}
+  to{transform:translateY(-110vh);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<section class="hero">
+  <h1>Happy Birthday, Maya 💖</h1>
+  <p>Today the universe feels more beautiful… because it celebrates YOU.</p>
+</section>
+
+<div class="card">
+  <div class="shayari">
+    <span style="--i:1">तुम पहनो अगर पायल तो मैं ले आऊँगा,</span>
+    <span style="--i:2">तुम लगाओ अगर बिंदी तो मैं ले आऊँगा,</span>
+    <span style="--i:3">तुम एक बार माँगो तो सही कुछ,</span>
+    <span style="--i:4">मैं अपना सबकुछ देकर तुम्हारे लिये सब कुछ ले आऊँगा।</span>
+    <span style="--i:5">&nbsp;</span>
+    <span style="--i:6">और ये तो चाँद तारे तोड़ कर लाने के होते हैं वादे,</span>
+    <span style="--i:7">ये सब होते हैं फिजूल… मगर फिर भी</span>
+    <span style="--i:8">देखना हो तुम्हें चाँद, तो मैं तुम्हारे लिए आईना ले आऊँगा!! 🌙✨</span>
+  </div>
+
+  <div class="wishes">
+    <p>
+      Dear <b>Maya</b>,  
+      today is not just your birthday, it’s the day the world became a little
+      kinder, a little brighter, and a lot more beautiful.
+      <br><br>
+      May your smile always shine brighter than the moon,
+      may your dreams fly higher than the stars,
+      and may life gift you moments that make your heart feel full.
+      <br><br>
+      You are grace, warmth, and magic — all wrapped in one soul.
+      And on this special day, I wish you love that feels safe,
+      happiness that stays forever,
+      and a life that always treats you gently.
+    </p>
+  </div>
+</div>
+
+<div class="end">
+  <p>
+    I won’t promise you the moon or the stars,<br>
+    but I promise to stand with you under every sky, always.
+  </p>
+  <h3>Forever for you, Maya 💖</h3>
+</div>
+
+<script>
+function heart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💖";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=6+Math.random()*4+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),9000);
+}
+setInterval(heart,450);
+</script>
+
+</body>
+</html>
